@@ -1,22 +1,16 @@
-#  level 2 task 1
-
-import random
-
+#  GUESSING GAME
+import randoM
 def guessing_game():
-    # Generate a random number between 1 and 100
     secret_number = random.randint(1, 100)
     attempts = 0
 
     print("Welcome to the Guessing Game!")
     print("I have selected a random number between 1 and 100. Try to guess it!")
 
-    # Keep asking the user until they guess the correct number
     while True:
-        # Prompt the user for their guess
         guess = int(input("Enter your guess: "))
         attempts += 1
 
-        # Provide feedback based on the guess
         if guess < secret_number:
             print("Too low! Try again.")
         elif guess > secret_number:
@@ -24,8 +18,6 @@ def guessing_game():
         else:
             print(f"Congratulations! You've guessed the correct number {secret_number} in {attempts} attempts.")
             break
-
-# Start the game
 guessing_game()
 
 
