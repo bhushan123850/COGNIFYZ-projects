@@ -1,25 +1,20 @@
-#level 2 task 2
-import random
+#   NUMBER GUESSER
 
+import random
 def number_guesser():
-    # Define the range for the random number
     lower_bound = int(input("Enter the lower bound for the range: "))
     upper_bound = int(input("Enter the upper bound for the range: "))
     
-    # Generate a random number within the range
     secret_number = random.randint(lower_bound, upper_bound)
     
     print(f"\nI have selected a number between {lower_bound} and {upper_bound}. Try to guess it!")
 
     attempts = 0
 
-    # Keep asking the user for guesses until they get it right
     while True:
-        # Ask the user for a guess
         guess = int(input("Enter your guess: "))
         attempts += 1
         
-        # Provide feedback based on the guess
         if guess < secret_number:
             print("Too low! Try again.")
         elif guess > secret_number:
@@ -28,7 +23,6 @@ def number_guesser():
             print(f"Congratulations! You've guessed the correct number {secret_number} in {attempts} attempts.")
             break
 
-# Start the game
 number_guesser()
 
 
