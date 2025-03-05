@@ -1,0 +1,13 @@
+#level 1 task 1
+
+s = str(input("enter the word   "))
+s = s[::-1]
+print (s)  
+
+
+
+
+
+
+
+

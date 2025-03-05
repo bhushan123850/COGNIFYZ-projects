@@ -1,0 +1,34 @@
+#  level 2 task 3
+
+import re
+
+def check_password_strength(password):
+    # Check length of the password
+    if len(password) < 8:
+        return "Weak: Password must be at least 8 characters long."
+    
+    # Check for uppercase letter
+    if not any(char.isupper() for char in password):
+        return "Weak: Password must contain at least one uppercase letter."
+    
+    # Check for lowercase letter
+    if not any(char.islower() for char in password):
+        return "Weak: Password must contain at least one lowercase letter."
+    
+    # Check for digit
+    if not any(char.isdigit() for char in password):
+        return "Weak: Password must contain at least one digit."
+    
+    # Check for special character
+    if not any(char in "!@#$%^&*()-_=+[]{}|;:,.<>?/`~" for char in password):
+        return "Weak: Password must contain at least one special character."
+    
+    # If all conditions are met, the password is strong
+    return "Strong: Your password is strong."
+
+# Test the function
+password = input("Enter a password to check its strength: ")
+result = check_password_strength(password)
+print(result)
+
+
