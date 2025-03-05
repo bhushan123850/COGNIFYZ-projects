@@ -1,4 +1,4 @@
-#level 1 task 1
+#  STRING REVERSAL
 
 s = str(input("enter the word   "))
 s = s[::-1]
