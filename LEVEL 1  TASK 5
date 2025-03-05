@@ -1,12 +1,9 @@
-#level 1 task 5
+# PALINDROME CHECKER
+
 def is_palindrome(s):
-    # Remove spaces and convert the string to lowercase to ensure the check is case-insensitive
     cleaned_string = ''.join(s.split()).lower()
 
-    # Compare the string with its reverse
     return cleaned_string == cleaned_string[::-1]
-
-# Test the function
 input_string = input("Enter a string to check if it's a palindrome: ")
 
 if is_palindrome(input_string):
