@@ -1,5 +1,4 @@
-# level 1 task 2
-# Temperature Conversion Program
+# TEMPERATURE CONVERSION
 
 def celsius_to_fahrenheit(celsius):
     return (celsius * 9/5) + 32
